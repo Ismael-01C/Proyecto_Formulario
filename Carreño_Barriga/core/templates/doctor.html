@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="{% static '/img/logo.png' %}">
     <title>Doctor</title>
 </head>
 
-<body>
+<body background="{% static '/img/piel2.jpg' %}">
+    <!-- Inicio del Encabezado -->
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'principal' %}">Inicio</a>
@@ -25,10 +28,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'doctor' %}">Doctor</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="{% url 'tablas' %}">Registro de las Tablas</a>
+                    </li> -->
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Fin del Encabezado -->
+
+    <!-- Atencion/Visita del Doctor -->
     <b><label for="basic-url" class="form-label">Atencion</label></b>
     <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -57,30 +66,31 @@
             <option>Fiebre</option>
         </select>
 
-        
+
     </div>
     <div class="row g-3">
-            <div class="col">
-                <b><label for="exampleFormControlTextarea1" class="form-label">Receta</label></b>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-    <br>
-    <div class="col">
-        <b><label for="inputState" class="form-label" >Cantidad</label></b>
-        <select id="inputState" class="form-select">
-            <option selected>Indeterminado</option>
-            <option>Cada 4 Horas</option>
-            <option>Cada 6 Horas</option>
-            <option>Cada 8 Horas</option>
-            <option>Cada 12 Horas</option>
-            <option>Cada Dia</option>
-        </select>
+        <div class="col">
+            <b><label for="exampleFormControlTextarea1" class="form-label">Receta</label></b>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <br>
+        <div class="col">
+            <b><label for="inputState" class="form-label">Cantidad</label></b>
+            <select id="inputState" class="form-select">
+                <option selected>Indeterminado</option>
+                <option>Cada 4 Horas</option>
+                <option>Cada 6 Horas</option>
+                <option>Cada 8 Horas</option>
+                <option>Cada 12 Horas</option>
+                <option>Cada Dia</option>
+            </select>
+        </div>
     </div>
-</div>
-<br>
-<label>
-<button class="btn btn-primary" type="submit">Enviar Formulario</button>
-</label>
+    <br>
+    <label>
+        <button class="btn btn-primary" type="submit">Guardar</button>
+        <!-- Atencion/Visita del Doctor -->
+    </label>
 </body>
 
 </html>

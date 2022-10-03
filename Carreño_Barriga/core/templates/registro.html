@@ -2,121 +2,135 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Sistema de Registro</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static '/css/registro.css' %}">
+  <link rel="icon" href="{% static '/img/logo.png' %}">
+  <title>Sistema de Registro</title>
 </head>
+<!-- Inicio del Encabezado -->
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'principal' %}">Inicio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'registro' %}">Registrar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'doctor' %}">Doctor</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-<center><label for="basic-url" class="form-label">Empresa</label></center>
-<br>
-    <div class="input-group mb-3" needs-validation>
-        <span class="input-group-text" id="basic-addon1">Nombre</span>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-            aria-describedby="basic-addon1">
+<body background="{% static '/img/blanco2.jpg' %}">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'principal' %}">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'registro' %}">Registrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'doctor' %}">Doctor</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="{% url 'tablas' %}">Registro de las Tablas</a>
+        </li> -->
+        </ul>
+      </div>
     </div>
+  </nav>
+  <!-- Fin del Encabezado -->
 
-    <div class="input-group mb-3">
-        <input type="text" class="form-control"  aria-label="Recipient's username"
-            aria-describedby="basic-addon2">
-        <span class="input-group-text" id="basic-addon2">Direccion</span>
-    </div>
-
-   
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon3">Ciudad</span>
-        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-    </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<center><label for="basic-url" class="form-label">Sucursal</label></center>
-<br>
-<div class="input-group mb-3" needs-validation>
+  <!-- Inicio de los Formularios de Registros -->
+  <b>
+    <center><label for="basic-url" class="form-label">Empresa</label></center>
+  </b>
+  <br>
+  <div class="input-group mb-3" needs-validation>
     <span class="input-group-text" id="basic-addon1">Nombre</span>
     <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-        aria-describedby="basic-addon1">
-</div>
+      aria-describedby="basic-addon1">
+  </div>
 
-<div class="input-group mb-3">
-    <input type="text" class="form-control"  aria-label="Recipient's username"
-        aria-describedby="basic-addon2">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
     <span class="input-group-text" id="basic-addon2">Direccion</span>
-</div>
+  </div>
 
 
-<div class="input-group mb-3">
+  <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon3">Ciudad</span>
     <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-</div>
+  </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<center><label for="basic-url" class="form-label">Paciente</label></center>
-<br>
-<form class="row g-3 needs-validation">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <b>
+    <center><label for="basic-url" class="form-label">Sucursal</label></center>
+  </b>
+  <br>
+  <div class="input-group mb-3" needs-validation>
+    <span class="input-group-text" id="basic-addon1">Nombre</span>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+      aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <span class="input-group-text" id="basic-addon2">Direccion</span>
+  </div>
+
+
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon3">Ciudad</span>
+    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <b>
+    <center><label for="basic-url" class="form-label">Paciente</label></center>
+  </b>
+  <br>
+  <form class="row g-3 needs-validation">
     <div class="col-md-4">
-      <label for="validationCustom01" class="form-label">Nombres</label>
+      <b><label for="validationCustom01" class="form-label">Nombres</label></b>
       <input type="text" class="form-control" id="validationCustom01" placeholder="2 Nombres" required>
       <div class="valid-feedback">
         Todo Correcto :D !
       </div>
     </div>
     <div class="col-md-4">
-      <label for="validationCustom02" class="form-label">Apellidos</label>
+      <b><label for="validationCustom02" class="form-label">Apellidos</label></b>
       <input type="text" class="form-control" id="validationCustom02" placeholder="2 Apellidos" required>
       <div class="valid-feedback">
         Todo Correcto :D !
       </div>
     </div>
     <div class="col-md-4">
-      <label for="validationCustomUsername" class="form-label">Telefono</label>
+      <b><label for="validationCustomUsername" class="form-label">Telefono</label></b>
       <div class="input-group has-validation">
         <span class="input-group-text" id="inputGroupPrepend">#</span>
-        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+          required>
         <div class="invalid-feedback">
           Porfavor poner su numero de Telefono >:c.
         </div>
       </div>
     </div>
     <div class="col-md-6">
-      <label for="validationCustom03" class="form-label">Direccion</label>
+      <b><label for="validationCustom03" class="form-label">Direccion</label></b>
       <input type="text" class="form-control" id="validationCustom03" required>
       <div class="invalid-feedback">
         Porfavor agregar su Direccion >:c.
       </div>
     </div>
     <div class="col-md-3">
-      <label for="validationCustom04" class="form-label">Tipo de Sangre</label>
+      <b><label for="validationCustom04" class="form-label">Tipo de Sangre</label></b>
       <select class="form-select" id="validationCustom04" required>
         <option selected disabled value="">Escoga</option>
         <option>A+</option>
@@ -133,7 +147,7 @@
       </div>
     </div>
     <div class="col-md-3">
-      <label for="validationCustom05" class="form-label">Estatura</label>
+      <b><label for="validationCustom05" class="form-label">Estatura</label></b>
       <input type="text" class="form-control" id="validationCustom05" required>
       <div class="invalid-feedback">
         Porfavor poner su estatura >:c.
@@ -142,11 +156,11 @@
     <div class="col-12">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-        <label class="form-check-label" for="invalidCheck">
-          ¿ Aceptas todos los terminos y condiciones para endeudarte en la Gangan :3 ?
-        </label>
+        <b><label class="form-check-label" for="invalidCheck">
+            ¿ Aceptas todos los terminos y condiciones para endeudarte en la Gangan :3 ?
+          </label></b>
         <div class="invalid-feedback">
-         Acepta era bromita 🙈
+          Acepta era bromita 🙈
         </div>
       </div>
     </div>
@@ -154,7 +168,8 @@
       <button class="btn btn-primary" type="submit">Enviar Formulario</button>
     </div>
   </form>
-<script src="/Carreño_Barriga/core/JS/validacion.js"></script>
+  <!-- Fin de los Formularios de Registros -->
+  <script src="/Carreño_Barriga/core/JS/validacion.js"></script>
 </body>
 
 </html>

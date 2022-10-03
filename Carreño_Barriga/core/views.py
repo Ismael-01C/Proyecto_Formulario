@@ -12,3 +12,6 @@ def registro(request):
 
 def doctor(request):
     return render(request, 'doctor.html')
+
+# def tablas(request):
+#     return render(request, 'tablas-registro.html')

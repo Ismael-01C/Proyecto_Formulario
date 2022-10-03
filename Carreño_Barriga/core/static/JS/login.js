@@ -5,7 +5,7 @@ async function login()
 
 			if(usuario == "adminCB" && Contraseña == "3254")
 			{
-				alert("Usuario y Contraseña validos");
+				alert("Usuario y Contraseña validos :D");
                 window.location.href="principal";
 			}
 			if (usuario == "" && Contraseña == ""){
